@@ -1,0 +1,133 @@
+{
+  "id": "de6a7a9c-c1e8-4ae8-8be0-d1dfc10fcc47",
+  "title": "update this open file with some beatuful message.",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "update this open file with some beatuful message.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nupdate this open file with some beatuful message.\n\n"
+        }
+      ],
+      "id": "6442289a-bca3-4a7d-8258-3743715d110a",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "362808c8-ebb2-4da4-afc7-5d4534d286db",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "are you there?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nare you there?\n\n"
+        }
+      ],
+      "id": "4be35f2a-0c3f-4854-8f61-0fd2aedd97db",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "d48622f7-c8dc-4fae-afa5-8a4cec7655fd",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        }
+      }
+    }
+  ],
+  "createdAt": 1776639227376,
+  "updatedAt": 1776639468683,
+  "schemaVersion": 1
+}

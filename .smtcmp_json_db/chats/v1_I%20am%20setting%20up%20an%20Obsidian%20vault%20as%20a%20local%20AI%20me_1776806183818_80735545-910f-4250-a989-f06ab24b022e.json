@@ -1,0 +1,1128 @@
+{
+  "id": "80735545-910f-4250-a989-f06ab24b022e",
+  "title": "I am setting up an Obsidian vault as a local AI me",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.\n\n"
+        }
+      ],
+      "id": "f430af34-43a2-4c91-b99c-8cee59bfad63",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n```\nWelcome.md\n\n## 📁 Folder Structure\n\n```\n├── 🕍 Human/\n│   ├── Daily Notes/\n│   ├── Journal/\n│   ├── People/\n│   ├── Projects/\n│   └── Resources/\n│\n├– 🤖 AI/\n│   ├── Skills/\n│   ├── Workflows/\n│   ├── Templates/\n│   └── SOPs/\n```\n\n## 📝 Quick Reference\n\n- **Human/** = Personal notes, journal, research, projects\n- **AI/** = Agent capabilities, automation, system prompts, standard operating procedures\n</smtcmp_block>",
+      "id": "9dc9f74e-32f6-4bdb-ab84-ad0d49394aca",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 638,
+          "completion_tokens": 241,
+          "total_tokens": 879
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "write a python code that can be run in cmd to achieve this.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nwrite a python code that can be run in cmd to achieve this.\n\n"
+        }
+      ],
+      "id": "b654fa12-de80-4845-bcff-0c227013d285",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## Python Script for Folder Structure\n\n```python\n# Create Obsidian AI Memory Vault Structure\nimport os\n\nBASE_NAME = \"my-ai-memory-vault\"\nHUMAN_DIR = \"Human\"\nAI_DIR = \"AI\"\n\n# Human folders\nHUMAN_SUBDIRS = [\"Daily Notes\", \"Journal\", \"People\", \"Projects\", \"Resources\"]\n\n# AI folders\nAI_SUBDIRS = [\"Skills\", \"Workflows\", \"Templates\", \"SOPs\"]\n\n# Create Human directories\nos.makedirs(BASE_NAME, exist_ok=True)\nfor sub in HUMAN_SUBDIRS:\n    os.makedirs(f\"{BASE_NAME}/{HUMAN_DIR}/{sub}\", exist_ok=True)\n\n# Create AI directories\nfor sub in AI_SUBDIRS:\n    os.makedirs(f\"{BASE_NAME}/{AI_DIR}/{sub}\", exist_ok=True)\n\nprint(\"✅ Vault structure created successfully!\")\nprint(f\"📁 Root: {BASE_NAME}\")\n```\n\n## Usage\n\nRun in cmd:\n```cmd\npython generate_structure.py\n```\n</smtcmp_block>",
+      "id": "c8f53c40-9e9e-4c77-9788-843a1bc0468a",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 812,
+          "completion_tokens": 270,
+          "total_tokens": 1082
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "no I want to run directly in cmd",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nno I want to run directly in cmd\n\n"
+        }
+      ],
+      "id": "df1c6611-8574-44ae-9b37-f6fcf3d55073",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## Batch File for Folder Structure (Windows cmd)\n\nSave as `create_vault.bat`:\n\n```batch\n@echo off\n\nset BASE_NAME=my-ai-memory-vault\nset HUMAN_DIR=Human\nset AI_DIR=AI\n\nset HUMAN_SUBDIRS=Daily Notes Journal People Projects Resources\nset AI_SUBDIRS=Skills Workflows Templates SOPs\n\nset /a COUNT=0\nset HUMAN_COUNT=0\nset AI_COUNT=0\n\nif not exist \"%BASE_NAME%\" mkdir \"%BASE_NAME%\" else echo %BASE_NAME% exists\n\nfor %%H in (%HUMAN_SUBDIRS%) do (\n    mkdir \"%BASE_NAME%\\%HUMAN_DIR%\\%%H\"\n    set /a HUMAN_COUNT+=1\n    echo Created %HUMAN_DIR%\\%%H%\n)\n\nfor %%A in (%AI_SUBDIRS%) do (\n    mkdir \"%BASE_NAME%\\%AI_DIR%\\%%A\"\n    set /a AI_COUNT+=1\n    echo Created %AI_DIR%\\%%A%\n)\n\necho %DATE% %TIME% - Vault created successfully!\necho Created %HUMAN_COUNT% Human folders and %AI_COUNT% AI folders\npause\n```\n\n## Usage\n\n```cmd\ncreate_vault.bat\n```\n\nOr run manually in cmd:\n\n<file content=\"mkdir my-ai-memory-vault\\Human\\\\Daily Notes my-ai-memory-vault\\Human\\\\Journal my-ai-memory-vault\\Human\\\\People my-ai-memory-vault\\Human\\\\Projects my-ai-memory-vault\\Human\\\\Resources my-ai-memory-vault\\AI\\\\Skills my-ai-memory-vault\\AI\\\\Workflows my-ai-memory-vault\\AI\\\\Templates my-ai-memory-vault\\AI\\\\SOPs\" filename=\"cmd_create_vault.cmd\" language=\"markdown\">\n</file>\n</smtcmp_block>",
+      "id": "03d7bae6-1bd0-4f0d-9876-6fb51a9d1da7",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 983,
+          "completion_tokens": 446,
+          "total_tokens": 1429
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "do we have any extension to do this without creating a file",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ndo we have any extension to do this without creating a file\n\n"
+        }
+      ],
+      "id": "e914a5a1-e5f2-4263-ab32-d178134ae84b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## Run Directly (No Intermediate File)\n\nCopy-paste this directly into **cmd.exe**:\n\n```cmd\n@echo off\nmkdir my-ai-memory-vault\\Human\\DailyNotes\nmkdir my-ai-memory-vault\\Human\\Journal\nmkdir my-ai-memory-vault\\Human\\People\nmkdir my-ai-memory-vault\\Human\\Projects\nmkdir my-ai-memory-vault\\Human\\Resources\nmkdir my-ai-memory-vault\\AI\\Skills\nmkdir my-ai-memory-vault\\AI\\Workflows\nmkdir my-ai-memory-vault\\AI\\Templates\nmkdir my-ai-memory-vault\\AI\\SOPs\necho ✅ Vault folder structure created!\n```\n\n## Usage\n\n1. Open **Command Prompt** (cmd.exe)\n2. Navigate to your vault location (or any folder)\n3. Paste and press **ENTER**\n\nNo file creation needed!\n</smtcmp_block>",
+      "id": "0caee5c3-8d14-4243-994e-13eecdfe010e",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1410,
+          "completion_tokens": 239,
+          "total_tokens": 1649
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I do not want my-ai-memory-vault",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI do not want my-ai-memory-vault\n\n"
+        }
+      ],
+      "id": "48c29504-0c15-4b14-aeee-a1c69b6489cb",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## Run Directly (No File, No Prefix)\n\nCopy-paste this into **cmd.exe**:\n\n```cmd\nmkdir Human\nmkdir Human\\\\DailyNotes\nmkdir Human\\\\Journal\nmkdir Human\\\\People\nmkdir Human\\\\Projects\nmkdir Human\\\\Resources\nmkdir AI\nmkdir AI\\\\Skills\nmkdir AI\\\\Workflows\nmkdir AI\\\\Templates\nmkdir AI\\\\SOPs\necho ✅ Complete!\n```\n\n## Usage\n\n1. Open **Command Prompt** (cmd.exe)\n2. Navigate to where you want the vault (or use `.`):\n   ```cmd\n   mkdir ..\\\\AI_Storage\n   ```\n3. Run the mkdir commands above\n4. Paste and press **ENTER**\n\nFolders created directly in current directory with **AI/** and **Human/** roots!\n</smtcmp_block>",
+      "id": "ee3c4ba1-0768-44dc-9135-35b017bab1c3",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1636,
+          "completion_tokens": 237,
+          "total_tokens": 1873
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "create a template for my daily routine",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ncreate a template for my daily routine\n\n"
+        }
+      ],
+      "id": "4b6041c1-9eee-40d9-af29-5bd8b365aff0",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<file content=\"# Daily Notes\n\n---\ndate: {{date}}\ntags: [journal/daily]\n</file content\">\n<smtcmp_block filename=\"Daily Note Template.md\" language=\"markdown\">\n---\ndate: {{date}}\ntags: [daily]\n\n## 🌅 Morning\n\n- [ ] Wake up at __:00\n- [ ] ___ exercise ___ minutes\n- [ ] ___ breakfast\n- [ ] ___ meditate/pray ___ minutes\n\n---\n\n## 📝 Morning Review\n\n- What's my top priority today?\n- What did I do yesterday that was important?\n- What habits should I maintain?\n\n---\n\n## 🌞 Work Blocks\n\n### [ ] Deep Work Block 1\n- [ ] Task\n- [ ] Task\n\n### [ ] Shallow Work Block\n- [ ] Task\n- [ ] Task\n\n---\n\n## 🌇 Afternoon Check-in\n\n- [ ] Lunch\n- [ ] Review progress\n- [ ] What's blocking me?\n\n---\n\n## 🌜 Evening\n\n### [ ] Wind Down\n- [ ] ___ minutes of quiet time\n- [ ] ___ relaxation (read, music, etc.)\n- [ ] ___ gratitude (3 things)\n\n### 📱 Digital Detox\n- [ ] Check phone only for ___\n- [ ] Close unnecessary tabs\n\n---\n\n## 📔 Notes\n\n| Date | Topic | Summary | Action Items |\n|------|-------|---------|--------------|\n| -----| ------ |---------|--------------|\n\n---\n\n## 🎯 Tonight's Focus\n\n- [ ] _________________\n- [ ] _________________\n\n---\n</smtcmp_block>",
+      "id": "bb91b0ee-b8cf-4da4-9014-eb970f321310",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1916,
+          "completion_tokens": 402,
+          "total_tokens": 2318
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "give me again in proper format",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ngive me again in proper format\n\n"
+        }
+      ],
+      "id": "7e50e20b-4d90-454f-a147-a7765bbdb25b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block filename=\"Daily Note Template.md\" language=\"markdown\">\n---\ndate: {{date}}\ntags: [daily]\n\n## 🌅 Morning\n- [ ] Wake up at __:00\n- [ ] Exercise ___ minutes\n- [ ] Eat breakfast\n- [ ] Meditate/pray ___ minutes\n\n## 📝 Priorities\n- Top focus today:\n- Morning goals:\n\n## 📚 Deep Work Block\n- [ ] Task 1\n- [ ] Task 2\n- [ ] Task 3\n\n## 📱 Afternoon Review\n- [ ] Lunch\n- [ ] Progress check\n- [ ] Blocker notes:\n\n## 🌇 Evening\n### [ ] Wind Down\n- [ ] ___ minutes quiet time\n- [ ] ___ relaxation (read, music)\n- [ ] ___ gratitude items\n\n### 📱 Digital Detox\n- [ ] Phone only for ___\n- [ ] Close unused apps\n\n## 📔 Capture\n\n| Date | Topic | Notes |\n|------|-------|-------|\n| | | |\n\n## 🎯 Tomorrow's Focus\n- [ ] \n- [ ] \n**\n</smtcmp_block>\n\n## How to Use\n1. Copy to `Human/Daily Notes/` in Obsidian\n2. Paste as new daily note (Cmd + Option + N)\n3. Customize the template as needed",
+      "id": "a3fe5367-7b14-4165-b9c2-a798fc5dae05",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 2213,
+          "completion_tokens": 487,
+          "total_tokens": 2700
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "can you generate a JIRA board like tracking system for me",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ncan you generate a JIRA board like tracking system for me\n\n"
+        }
+      ],
+      "id": "d7f18ae4-a5f9-4fc0-8f04-6b9133f557e9",
+      "mentionables": []
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block filename=\"Project Tracking System.md\" language=\"markdown\">\n```\n# 🏗️ Project Tracking System (Jira-like for Obsidian)\n\n---\n\n## 📂 Folder Structure\n\n```\nProjects/\n├── Epic Title.md\n├── Projects/{project-name}/\n│   ├── Backlog.md\n│   ├── Active/\n│   │   ├── In Progress/\n│   │   └── Review/\n│   ├── Done/\n│   └── {task-id}.md\n│\n└── Boards/\n    ├── Sprint 1.md\n    └── Sprint 2.md\n```\n\n---\n\n## 🧭 Epic Template\n\n```markdown\n# {{project-name}}\n\n---\ndate: {{today}}\ntags: [project/{{name}}]\n\n## 📦 Project Overview\n\n- **Objective:** \n- **Duration:** \n- **Priority:** \n\n---\n\n## 📋 Tasks\n\n| ID | Title | Status | Owner | Due Date | Notes |\n|----|-------|-----|------|----------|-|\n|---|---|-|--|---|---|\n\n---\n\n## 📊 Progress Overview\n\n- Completed: / \n- In Progress: \n- In Backlog: \n\n---\n\n## 📝 Notes\n\n*\n---\n```\n\n---\n\n## 🟢 Active Task Template\n\n```markdown\n# {{task-id}}: {{title}}\n\n---\ndate: {{date}}\ntags: [task/{{task-id}}]\naliases: [alias]\n\n## 📌 Summary\n\nWhat needs to be done:\n\n## 🔗 Related\n\n- [[Epic Name]]\n- [[Related Tasks]]\n\n## 📝 Progress Notes\n\n1. \n2.",
+      "id": "4f960fdc-b965-430c-bc58-82c8ea858465",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "No I want dragging system as well, you can use any plugin",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nNo I want dragging system as well, you can use any plugin\n\n"
+        }
+      ],
+      "id": "c8ebf9ab-3fba-4034-971e-3754e7b880eb",
+      "mentionables": []
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block filename=\"Kanban Project System.md\" language=\"markdown\">\n# 🏗️ Kanban Board (Jira-like with Drag-Drop)\n\n---\n\n## 📂 Recommended Setup\n\n### Required Plugins (Community)\n1. **Advanced Kanban** - Drag-drop Kanban boards\n2. **Calendar** - Timeline view\n3. **Templater** - Auto-date fields\n\n### Folder Structure\n\n```\nProjects/\n├── Sprint 1 Kanban.md\n├── Backlog.md\n└── Done.md\n\nProjects/\n└── {Project-Name}/\n    ├── Epics.md\n    ├── Tasks.md\n    └── Sub-tasks/\n```\n\n---\n\n## 🟣 Kanban Board Layout\n\n```markdown\n# 📊 {{Project-Name}} - Kanban Board\n\n---\ndate: {{date}}\ntags: [project/board/{{name}}]\n\n---\n\n## 🏗️ Board Columns\n\n- **📥 Backlog** - Ideas, research\n- **📋 To Do** - Ready for work\n- **🔄 In Progress** - Currently working\n- **🧩 Review** - QA, stakeholder review\n- **✅ Done** - Completed\n\n---\n\n## 💡 How to Use\n\n1. Install **Advanced Kanban plugin**\n2. Create columns in board view\n3. Drag tasks between states\n4. Click tasks to open in editor\n5. Use `Templater` for quick cards\n\n---\n\n## 📝 Task Card Template\n\n```markdown\n---\ndate: {{date}}\nstatus: todo\npriority: medium\nepic: \n---\n\n# {{Title}}\n\n---\n\n## 🎯 Objective\n\n- \n\n## 📚 Details\n\n- \n- \n\n## 🔗 Related\n\n- [[Epic]]\n- [[Related Tasks]]\n\n## ✅ Checklist\n\n- [ ] \n- [ ] \n\n## 🧭 Next Steps\n\n--\n```\n\n---\n\n## 📊 Dashboard View (Kanban Table)\n\n```markdown\n# 🎯 Project Dashboard\n\n---\ntags: [project/{{project-name}}]\n\n## 📁 Board Summary\n\n| Column | Count |\n|---|-|\n| Backlog | |\n| To Do | |\n| In Progress | |\n| Review | |\n| Done | |\n\n## 🎯 Top Priority Items\n\n- \n- \n\n## ⚠️ Blockers\n\n- \n- \n```\n\n---\n</smtcmp_block>\n\n## 🔧 Setup Instructions\n\n1. **Install Plugins**: Settings → Community Plugins\n2. Enable: `Advanced Kanban`, `Templater`, `Calendar`\n3. Create board using plugin's board view\n4. Configure columns per Jira workflow\n5. Drag tasks in board view\n6. Click for full editor view\n\n## 📌 Pro Tip\n\n- Use `Templater`'s `{{query}}` to auto-fill status\n- Tag cards by priority: [priority/high], [priority/medium]\n- Sync with Obsidian's graph for epics\n- Add date tags for timeline visualization",
+      "id": "143dbf5d-00b2-4dc4-b4a5-58febfb8833f",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 2932,
+          "completion_tokens": 722,
+          "total_tokens": 3654
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "are you there/",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nare you there/\n\n"
+        }
+      ],
+      "id": "da0d6820-9edd-4dff-b8ab-c633bfe1254d",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I am here. How can I help you further with your Obsidian setup?",
+      "id": "7766b87e-6cb3-425c-83aa-c1c560fdea05",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 3633,
+          "completion_tokens": 85,
+          "total_tokens": 3718
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Help me to design a JIRA board like task tracker. Feel free to use plugin",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nHelp me to design a JIRA board like task tracker. Feel free to use plugin\n\n"
+        }
+      ],
+      "id": "f75626ce-7f98-41d7-8847-a0a6ceb209e7",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "To build a true JIRA-like experience in Obsidian with drag-and-drop, you need a \"Task-as-a-Note\" architecture. This allows each task to have its own metadata, attachments, and deep documentation.\n\n### 🛠️ Required Plugins\n1. **Kanban**: For the drag-and-drop board view.\n2. **Dataview**: To create \"Jira Dashboards\" (automated tables/summaries).\n3. **Templater**: To generate new tasks with standardized metadata.\n4. **Metadata Menu** (Optional): To add dropdown menus for \"Status\" or \"Priority\" inside notes.\n\n---\n\n### 📂 Recommended Folder Structure\n```text\nProjects/\n├── 📋 Boards/          (Kanban Board files)\n├── 🚀 Sprints/         (Sprint planning notes)\n├── 🎫 Tasks/           (Individual task notes - 1 note per task)\n└── 🏢 Epics/           (High-level project notes)\n```\n\n---\n\n### 📄 1. The \"Issue\" Template (The Task)\nEvery task starts from this template. It uses YAML properties to store JIRA-like data.\n\n<smtcmp_block filename=\"Templates/New Task Template.md\" language=\"markdown\">\n```markdown\n---\ntype: task\nstatus: todo\npriority: medium\nassignee: Me\nsprint: Sprint 1\ndue_date: <% tp.date.now(\"YYYY-MM-DD\") %>\nepic: \ntags: [task]\n---\n\n# 🎫 {{title}}\n\n## 📝 Description\n<!-- Describe the requirements here -->\n\n## 🎯 Acceptance Criteria\n- [ ] \n- [ ] \n\n## 🔗 Links & References\n- **Epic:** [[ ]]\n- **Related:** \n\n## 🪵 Activity Log\n- **<% tp.date.now(\"YYYY-MM-DD HH:mm\") %>**: Task Created.\n```\n</smtcmp_block>\n\n---\n\n### 📋 2. The Kanban Board (The \"Sprint Board\")\nConfigure the **Kanban Plugin** to use these columns. Instead of writing text, you will drag **links to your task notes** between columns.\n\n<smtcmp_block filename=\"Boards/Sprint 1 Board.md\" language=\"markdown\">\n```markdown\n---\nkanban-plugin: basic\n---\n\n## 📥 Backlog\n- [[Task-123|Refactor API]]\n- [[Task-124|Update Documentation]]\n\n## 📋 To Do\n- [[Task-125|Fix Login Bug]]\n\n## 🔄 In Progress\n- [[Task-126|Database Migration]]\n\n## ✅ Done\n- [[Task-127|Setup Project Structure]]\n```\n</smtcmp_block>\n\n---\n\n### 📊 3. The Project Dashboard (The \"JIRA Dashboard\")\nUse **Dataview** to create an automated overview of all active tasks across all boards.\n\n<smtcmp_block filename=\"Boards/Project Dashboard.md\" language:=\"markdown\">\n```markdown\n# 📊 Project Dashboard\n\n## ⚠️ High Priority Blockers\n```dataview\nTABLE priority, due_date, assignee\nFROM \"Tasks\"\nWHERE priority = \"high\" AND status != \"done\"\nSORT due_date ASC\n```\n\n## 📅 Upcoming Deadlines\n```dataview\nTABLE status, sprint\nFROM \"Tasks\"\nWHERE due_date >= date(today)\nSORT due_date ASC\nLIMIT 10\n```\n\n## 📈 Sprint Progress\n```dataview\nLIST\nFROM \"Tasks\"\nWHERE status = \"in-progress\"\n```\n```\n</smtcmp_block>\n\n---\n\n### 🚀 Workflow Summary\n1. **Create a Task**: Use `Templater` to create a new note in the `Tasks/` folder.\n2. **Assign to Board**: Open your **Kanban Board**, and drag the link to your new task into the \"To Do\" column.\n3. **Update Status**: As you work, drag the task link in the Kanban board from `In Progress` $\\rightarrow$ `Done`.\n4. **Monitor**: Check the **Dashboard** to see automated reports on blockers and deadlines.",
+      "id": "da927009-4804-4833-adf6-e318b83d4d6b",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 3608,
+          "completion_tokens": 1852,
+          "total_tokens": 5460
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I just want boards and tasks not epics and sprints",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI just want boards and tasks not epics and sprints\n\n"
+        }
+      ],
+      "id": "4b6211db-e71c-4392-8ade-45b1c1a8b237",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "To keep it strictly to **Boards** and **Tasks**, we will use the **Kanban** plugin for the visual board and **Dataview** for a simple task list view.\n\n### 📂 Simplified Folder Structure\n```text\nTasks/          (All individual task notes)\nBoards/          (Your Kanban board files)\n```\n\n---\n\n### 📄 1. The Task Template\nUse this to create every new task. It contains the data needed for the board and lists.\n\n<smtcmp_block filename=\"Templates/Task Template.md\" language=\"markdown\">\n```markdown\n---\nstatus: todo\npriority: medium\ndue_date: {{date}}\ntags: [task]\n---\n\n# 📝 Task: {{title}}\n\n## 🎯 Description\n- \n\n## ✅ Checklist\n- [ ] \n```\n</smtcmp_block>\n\n---\n\n### 📋 2. The Kanban Board\nUse the **Kanban Plugin**. Create columns for your workflow. You will drag **links to your task notes** between these columns.\n\n<smtcmp_block filename=\"Boards/Main Board.md\" language=\"markdown\">\n```markdown\n---\nkanban-plugin: basic\n---\n\n## 📥 Backlog\n- [[Task 1]]\n- [[Task 2]]\n\n## 📋 To Do\n- [[Task 3]]\n\n## 🔄 In Progress\n- [[Task 4]]\n\n## ✅ Done\n- [[Task 5]]\n```\n</smtcmp_block>\n\n---\n\n### 📊 3. The Task List (Automatic View)\nUse the **Dataview Plugin** to see a \"Jira-style\" list of all tasks, sorted by priority or due date, without opening the board.\n\n<smtcmp_block filename=\"Boards/Task Overview.md\" language=\"markdown\">\n```markdown\n# 🗒️ All Tasks Overview\n\n```dataview\nTABLE status, priority, due_date\nFROM \"Tasks\"\nSORT priority DESC, due_date ASC\n```\n```\n</smtcmp_block>\n\n---\n\n### 🚀 Execution Workflow\n1.  **Create Note**: Create a new note in the `Tasks/` folder using the **Task Template**.\n2.  **Add to Board**: Open `Main Board.md` and drag the link `[[Task Name]]` into the desired column.\n3.  **Move Tasks**: Drag the link from `To Do` $\\rightarrow$ `In Progress` $\\rightarrow$ `Done` inside the Kanban view.\n4.  **Monitor**: Use the `Task Overview` file to see a master list of everything you have pending.",
+      "id": "0baca785-1a53-43ee-8331-30e3b96c2857",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 4381,
+          "completion_tokens": 803,
+          "total_tokens": 5184
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Please give instruction in details like when to create which file.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nPlease give instruction in details like when to create which file.\n\n"
+        }
+      ],
+      "id": "ec8a3a62-a4cc-41cf-a39d-d48cf1f9852b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Templates/Task Template.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "This guide follows a chronological setup. Follow these steps in order.\n\n### Phase 1: One-Time Setup (The Foundation)\n\n#### 1. Install Required Plugins\nGo to **Settings** $\\rightarrow$ **Community Plugins** $\\rightarrow$ **Browse** and install:\n*   **Kanban**: For the drag-and-drop interface.\n*   **Dataview**: To generate the automatic task list.\n*   **Templater**: To automate the creation of new tasks.\n\n#### 2. Create Your Folder Structure\nCreate these three folders at the root of your vault:\n*   `Tasks/` (Where all individual task notes will live)\n*     `Boards/` (Where your Kanban boards and Overview will live)\n*   `Templates/` (Where your Task Template will live)\n\n#### 3. Create the Task Template\n**File to create:** `Templates/Task Template.md`\nCopy the following code into this file. This ensures every task has the same properties for the board to read.\n\n<smtcmp_block filename=\"Templates/Task Template.md\" language=\"markdown\">\n```markdown\n---\nstatus: todo\npriority: medium\ndue_date: {{date}}\ntags: [task]\n---\n\n# 📝 Task: {{title}}\n\n## 🎯 Description\n- \n\n## ✅ Checklist\n- [ ] \n```\n</smtcmp_block>\n\n#### 4. Create the Kanban Board\n**File to create:** `Boards/Main Board.md`\nYou can create this file manually, or right-click in your `Boards/` folder and select \"New Kanban Board\" if using the plugin.\n\n<smtcmp_block filename=\"Boards/Main Board.md\" language=\"markdown\">\n```markdown\n---\nkanban-plugin: basic\n---\n\n## 📥 Backlog\n- \n\n## 📋 To Do\n- \n\n## 🔄 In Progress\n- \n\n## ✅ Done\n- \n```\n</smtcmp_block>\n\n#### 5. Create the Task Overview (The Report)\n**File to create:** `Boards/Task Overview.md`\nThis file is a \"Read-Only\" view. You never edit this file; it automatically pulls data from your `Tasks/` folder.\n\n<smtcmp_block filename=\"Boards/Task Overview.md\" language=\"markdown\">\n```markdown\n# 🗒️ All Tasks Overview\n\n```dataview\nTABLE status, priority, due_date\nFROM \"Tasks\"\nSORT priority DESC, due_date ASC\n```\n```\n</smtcmp_block>\n\n---\n\n### Phase 2: Daily Workflow (The Execution)\n\nNow that the system is built, follow this loop every day:\n\n**Step 1: Create a New Task**\n1. Create a new note in the `Tasks/` folder.\n2. Use **Templater** to apply the `Task Template`.\n3. Give the note a clear title (e.g., `Fix Login Bug`).\n\n**Step 2: Add to the Board**\n1. Open `Boards/Main Board.md`.\n2. In the **Backlog** or **To Do** column, type `[[` and select the name of the task you just created.\n    * *Example:* `- [[Fix Login Bug]]`\n\n**Step 3: The \"Drag-and-Drop\"**\n1. As you start working, click and drag the `[[Fix Login Bug]]` link from **To Do** $\\rightarrow$ **In Progress**.\n2. When finished, drag it $\\rightarrow$ **Done**.\n\n**Step 4: Review**\n1. Open `Boards/Task Overview.md` anytime to see a high-level list of everything in your `Tasks/` folder without clicking through individual files.",
+      "id": "f32fd538-785f-4bfb-9168-d9312bcdaff1",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 4788,
+          "completion_tokens": 1382,
+          "total_tokens": 6170
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Can we make our boards beaultiful, basic view is not good",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nCan we make our boards beaultiful, basic view is not good\n\n"
+        }
+      ],
+      "id": "7090baf5-10e1-4219-9e58-df1a69d907e0",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Projects/Boards/Main Board.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "To make a Kanban board \"beautiful,\" you need to move beyond standard text and use **CSS Snippets**. This will add shadows, rounded corners, and modern colors to your cards, making them look like a professional project management tool (like Trello or Jira).\n\n### Step 1: Create the \"Beauty\" Snippet\n\n1.  Open **Obsidian Settings**.\n2.  Go to **Appearance** $\\rightarrow$ scroll down to **CSS Snippets**.\n3.  Click the **Folder Icon** to open your snippets folder in your computer's file explorer.\n4.  Create a new text file in that folder and name it `kanban-beauty.css`.\n5.  Paste the code below into that file and save it.\n\n<smtcmp_template language=\"css\">\n```css\n/* 🎨 Modern Kanban Styling */\n\n/* 1. Make the columns look like clean containers */\n.kanban-plugin .kanban-column {\n    background-color: #f4f5f7 !important; /* Light grey background */\n    border-radius: 12px !important;\n    border: none !important;\n    padding: 10px !important;\n    box-shadow: none !important;\n}\n\n/* 2. Style the Task Cards (The \"Jira\" Look) */\n.kanban-plugin .kanban-item {\n    background-color: #ffffff !important;\n    border-radius: 8px !important;\n    border: 1px solid #e0e0e0 !important;\n    padding: 12px !important;\n    margin-bottom: 10px !important;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;\n    transition: transform 0.2s ease, box-shadow 0.2s ease !important;\n}\n\n/* 3. Add a hover effect (Makes it interactive) */\n.kanban-plugin .kanban-item:hover {\n    transform: translateY(-2px) !important;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;\n    border-color: #007acc !important; /* Blue border on hover */\n}\n\n/* 4. Style the Column Headers */\n.kanban-plugin .kanban-column-header {\n    font-weight: 700 !important;\n    text-transform: uppercase !important;\n    letter-spacing: 0.5px !important;\n    color: #444 !important;\n    margin-bottom: 10px !important;\n}\n\n/* 5. Style Task Titles inside cards */\n.kanban-plugin .kanban-item-content {\n    font-size: 14px !important;\n    line-height: 1.4 !important;\n    color: #222 !important;\n}\n```\n</smtcmp_template>\n\n6.  Go back to Obsidian, click the **Refresh** icon next to CSS Snippets, and **toggle `kanban-beauty` ON**.\n\n---\n\n### Step 2: The \"Visual\" Content Strategy\nEven with CSS, a board looks better if you use **visual cues** inside your card titles.\n\n**Don't do this:**\n- `[[Task 1]]`\n- `[[Fix bug]]`\n\n**Do this (Use Emojis and Formatting):**\n- `🔴 [[High Priority: Fix Login Bug]]`\n- `🟡 [[Medium: Update Docs]]`\n- `🟢 [[Low: Routine Cleanup]]`\n\n---\n\n### Summary of the \"Premium\" Look\n| Feature | Standard View | With This Snippet |\n| :--- | :--- | :--- |\n| **Cards** | Flat, white, boring | Rounded, white, with subtle shadows |\n| **Columns** | Plain text list | Container-style containers |\n| **Interactivity**| Static | Cards \"lift\" when you hover over them |\n| **Feeling** | A text file | A professional Dashboard |",
+      "id": "7410d425-4592-4afa-ae08-5195264b804b",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 5165,
+          "completion_tokens": 1901,
+          "total_tokens": 7066
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "is this task created in correct format?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nis this task created in correct format?\n\n"
+        }
+      ],
+      "id": "9a88edbd-763a-49f7-aaa3-5b5d0a9d81f8",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Projects/Tasks/Fix Login Bug.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "If you are referring to the **`Fix Login Bug.md`** file you provided at the start of our chat, it is **almost** correct, but it has three small deviations from the \"Standard Template\" we just built. \n\nTo ensure your **Dataview Dashboard** and **Kanban Board** work perfectly, you should fix these:\n\n### ❌ Issues Found\n1.  **Extra Braces**: The `{{ }}` around the date and title are unnecessary and can cause formatting issues in text.\n2.  **Case Sensitivity**: You used `status: ToDo`. Dataview is case-sensitive; if your dashboard looks for `todo` (lowercase), it will skip this task.\n3.  **Heading Mismatch**: You used `## 🎯 Need to fix login bug`. To keep your notes consistent and easy to scan, use the standard `## 🎯 Description`.\n\n### ✅ The Corrected Version\n\n<smtcmp_block filename=\"Human/Projects/Tasks/Fix Login Bug.md\" language=\"markdown\">\n```markdown\n---\nstatus: todo\npriority: medium\ndue_date: 2014-04-22\ntags: [task]\n---\n\n# 📝 Task: Fix Login Bug\n\n## 🎯 Description\n- The login button is not responding on mobile devices.\n\n## ✅ Checklist\n- [ ] Test on iOS\n- [ ] Test on Android\n```\n</smtcmp_block>\n\n### 💡 Pro-Tip for the future\nWhen creating a task, **never write it manually**. Always use your **Templater** shortcut to trigger the `Task Template`. This ensures the `status`, `tags`, and `headings` are always 100% perfect.",
+      "id": "93ee4b97-2f58-4a2e-b80a-9d7b989d70cf",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 5886,
+          "completion_tokens": 1621,
+          "total_tokens": 7507
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "It has no task visible",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nIt has no task visible\n\n"
+        }
+      ],
+      "id": "799d4ce7-a67e-46a4-a603-9a4a0a2459d7",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Projects/Boards/Task Overview.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "If your tasks are not appearing, it is likely due to one of these three reasons. Please check them in this order:\n\n### 1. Check the Folder Location\nThe **Task Overview** (Dataview) is specifically looking inside the `Tasks/` folder.\n* **Check:** Is your task note located inside the `Tasks/` folder? \n* **Fix:** Move the task note to `Tasks/`.\n\n### 2. Check the Metadata (YAML)\nThe **Task Overview** only shows notes that have the `task` tag.\n* **Check:** Open your task note. Does the top section look exactly like this?\n<smtcmp_block filename=\"Tasks/YourTask.md\" language=\"markdown\">\n```markdown\n---\nstatus: todo\npriority: medium\ndue_date: 2023-10-27\ntags: [task]\n---\n```\n* **Fix:** Ensure `tags: [task]` is present and there are no typos in the word `tags`.\n\n### 3. Check the Kanban Board Setup\nThe **Kanban Board** does **not** find tasks automatically. You must manually \"register\" them on the board.\n* **Check:** Open `Boards/Main Board.md`. Do you see the link to your task there?\n* **Fix:** You must manually type the link into a column.\n    * *Example:* In the **Backlog** column, type: `- [[Your Task Name]]`\n\n---\n\n### 🔍 Quick Debugging Checklist\n| If this view is empty... | Check this first... |\n| :--- | :--- |\n| **Task Overview (Dataview)** | Does the note have `tags: [task]`? |\n| **Task Overview (Dataview)** | Is the note inside the `Tasks/` folder? |\n| **Kanban Board** | Did you manually add `[[Link to Task]]` to a column? |\n| **Kanban Board** | Is the Kanban plugin enabled? |",
+      "id": "6d44c8b7-9e40-46af-bce0-1b0b4206d493",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 6031,
+          "completion_tokens": 1009,
+          "total_tokens": 7040
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Main Board has automatically added task in todo",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nMain Board has automatically added task in todo\n\n"
+        }
+      ],
+      "id": "9e2c5a82-2619-4643-9ade-5d7433c19fa7",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Projects/Boards/Main Board.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "5118d4a7-08d0-42e3-affb-b4285d64f576",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        }
+      }
+    }
+  ],
+  "createdAt": 1776801567765,
+  "updatedAt": 1776806183818,
+  "schemaVersion": 1
+}

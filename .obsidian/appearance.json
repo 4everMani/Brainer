@@ -1,0 +1,7 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Primary",
+  "enabledCssSnippets": [
+    "Kanban-beautify"
+  ]
+}

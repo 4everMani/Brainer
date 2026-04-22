@@ -1,0 +1,170 @@
+{
+  "id": "da92eeeb-eb53-4daa-9428-550d06bde8f7",
+  "title": "hello",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "hello",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nhello\n\n"
+        }
+      ],
+      "id": "55b669f9-5ce7-4ee4-9e29-f27f282ba81b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "hello",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nhello\n\n"
+        }
+      ],
+      "id": "7aa7be20-baed-4f31-b91c-ab3d91d8c296",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "test",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ntest\n\n"
+        }
+      ],
+      "id": "88492085-8991-40de-8921-9bce959e788a",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you with your Obsidian vault today?",
+      "id": "67c07a6c-4465-4663-bb3f-39a400cf5dc6",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 606,
+          "completion_tokens": 124,
+          "total_tokens": 730
+        }
+      }
+    }
+  ],
+  "createdAt": 1776640660942,
+  "updatedAt": 1776640950003,
+  "schemaVersion": 1
+}

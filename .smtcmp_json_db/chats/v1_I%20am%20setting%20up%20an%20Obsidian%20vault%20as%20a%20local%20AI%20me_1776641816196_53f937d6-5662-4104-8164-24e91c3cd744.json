@@ -1,0 +1,267 @@
+{
+  "id": "53f937d6-5662-4104-8164-24e91c3cd744",
+  "title": "I am setting up an Obsidian vault as a local AI me",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.\n\n"
+        }
+      ],
+      "id": "9981b9ab-f0a4-4e97-b7d3-4599068085b8",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n# Proposed Vault Structure\n\n- 👤 **Human**\n    - 📝 Personal Notes\n    - 🚀 Projects\n    - 📓 Journal\n    - 🗄️ Archive\n- 🤖 **AI**\n    - 🛠️ Skills\n    - ⚙️ Workflows\n    - 📋 Templates\n    - 📜 SOPs\n    - 🗂️ Prompt Library\n</smtcmp_block>",
+      "id": "329fcc69-8e3a-45b1-a327-22ddf69670c4",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 657,
+          "completion_tokens": 619,
+          "total_tokens": 1276
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.\n\n"
+        }
+      ],
+      "id": "0220e6b6-6568-4340-8216-99aba12708e5",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "9d8c08d1-e494-4c66-8d08-b627ffd615e2",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "I am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nI am setting up an Obsidian vault as a local AI memory layer. Generate a folder structure separating 'Church and State'. I need a 'Human' folder for my personal notes, and an 'AI' folder for agent skills, workflows, templates, and SOPs. Output the structure clearly so I can build it.\n\n"
+        }
+      ],
+      "id": "db8dc79a-ecff-45b6-a6f4-0931698746eb",
+      "mentionables": []
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n# Vault Structure: Church & State\n\n- 👤 **Human** (Personal Context)\n    - 📓 Personal Notes\n    - 🚀 Projects\n    - 📅 Journal\n    - 🗄️ Archive\n- 🤖 **AI** (Agentic Layer)\n    - 🧠 Skills\n    - ⚙️ Workflows\n    - 📋 Templates\n    - 📜 SOPs\n    - ⌨️ Prompt Library\n</smtcmp_block>",
+      "id": "378a8de3-3397-4410-9812-4778b43a6a0b",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 822,
+          "completion_tokens": 732,
+          "total_tokens": 1554
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "create folder in current directory.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ncreate folder in current directory.\n\n"
+        }
+      ],
+      "id": "1f3d910e-b7c2-42cf-8799-bd755959b66a",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot directly access your local file system. To automate the creation of the structure provided, run one of the following in your terminal:\n\n### Option 1: Bash (macOS, Linux, or Git Bash)\n<smtcmp_block language=\"bash\">\nmkdir -p \"Human/Personal Notes\" \"Human/Projects\" \"Human/Journal\" \"Human/Archive\" \"AI/Skills\" \"AI/Workflows\" \"AI/Templates\" \"AI/SOPs\" \"AI/Prompt Library\"\n</smtcmp_block>\n\n### Option 2: Python (Cross-platform)\n<smtcmp_block language=\"python\">\nimport os\n\nfolders = [\n    \"Human/Personal Notes\", \"Human/Projects\", \"Human/Journal\", \"Human/Archive\",\n    \"AI/Skills\", \"AI/Workflows\", \"AI/Templates\", \"AI/SOPs\", \"AI/Prompt Library\"\n]\n\nfor folder in folders:\n    os.makedirs(folder, exist_ok=True)\n</smtcmp_block>",
+      "id": "df41c799-ad10-4f1e-bdd8-da479f037386",
+      "metadata": {
+        "model": {
+          "providerType": "ollama",
+          "providerId": "ollama",
+          "id": "gemma4:26b",
+          "model": "gemma4:26b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 949,
+          "completion_tokens": 1818,
+          "total_tokens": 2767
+        }
+      }
+    }
+  ],
+  "createdAt": 1776640999090,
+  "updatedAt": 1776641816196,
+  "schemaVersion": 1
+}

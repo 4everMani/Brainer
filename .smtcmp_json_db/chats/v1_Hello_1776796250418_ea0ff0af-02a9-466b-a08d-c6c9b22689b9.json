@@ -1,0 +1,344 @@
+{
+  "id": "ea0ff0af-02a9-466b-a08d-c6c9b22689b9",
+  "title": "Hello",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Hello",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nHello\n\n"
+        }
+      ],
+      "id": "d362d091-3c68-4fb9-9b24-4c772caba546",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! What can I help you with in your Obsidian vault today?\n\n<smtcmp_block>\n## Welcome.md\n\nI'm an expert in knowledge management and Obsidian. Whether you need to:\n* Organize your notes\n* Refine your markdown structure\n* Create templates or links\n\nJust ask me what you'd like to do next! 📝\n</smtcmp_block>",
+      "id": "9857e0b7-4128-430c-a748-28eba540f163",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 574,
+          "completion_tokens": 134,
+          "total_tokens": 708
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "create a template for templatr for my daily routine",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ncreate a template for templatr for my daily routine\n\n"
+        }
+      ],
+      "id": "eb316f58-e28f-4a57-bbbf-5009fc4af309",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## Daily Routine Template\n\n```markdown\n---\ndate: {{date}}\n---\n\n# 📅 {{date}}\n\n## ⏰ Morning\n- [ ] Wake up\n- [ ] Hydrate\n- [ ] [Meditation](#meditation)?\n- [ ] Morning review\n\n## 📝 Tasks\n- [ ] Task 1\n- [ ] Task 2\n- [ ] Task 3\n- [ ] Task 4\n\n## 📚 Notes & Reflections\n> [!summary] Daily Reflection\n> What went well today?\n> \n> What didn't go well?\n> \n> What will I improve tomorrow?\n```\n</smtcmp_block>",
+      "id": "728d68b0-e21c-4578-9c11-1b53dc21d131",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 678,
+          "completion_tokens": 236,
+          "total_tokens": 914
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "how to use this in templatr?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nhow to use this in templatr?\n\n"
+        }
+      ],
+      "id": "c6edb098-e863-4520-8a39-0553b23a5d74",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Welcome.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block language=\"markdown\">\n## How to Use Templater with Your Daily Routine\n\n1. **Install Templater Plugin**\n   - Settings → Community Plugins → Browse → Search \"Templater\" → Install\n   - Enable and Hot Reload\n\n2. **Create Template Folder**\n   - Vault root → `Templates` → Create your template file\n   - Name it: `Daily Routine.md` (or any name)\n\n3. **Paste Template Content**\n   - Copy the full markdown from above into the template file\n\n4. **Insert Daily Note**\n   - Create new note → Settings → Daily Note → Choose location\n   - Settings → Templater → Insert daily note\n   - Use `{{date}}` for automatic date insertion\n   - Use `{{dateYYYY-MM-DD}}` for specific format\n\n5. **Customize**\n   - Edit task list and checkboxes to match your needs\n   - Add your own links and notes sections\n\nPro: Templater creates a note with the date in the filename automatically.\n</smtcmp_block>",
+      "id": "9eba27ef-760f-4e5d-8003-04e015913c73",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 856,
+          "completion_tokens": 276,
+          "total_tokens": 1132
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "can you design a very asthetic dashboard for me.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\ncan you design a very asthetic dashboard for me.\n\n"
+        }
+      ],
+      "id": "c4019d2d-a72a-419f-ab05-1cbb6a0fb4c1",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block filename=\"dashboards/Aesthetic Dashboard.md\" language=\"markdown\">\n---\ncss: true\ndataview: true\ntags: [dashboard]\n---\n\n<style>\n/* Aesthetic CSS */\n.container {\n  max-width: 80%;\n  margin: auto;\n  border-radius: 15px;\n}\nh1 {\n  text-align: center;\n  color: #4A90E2;\n  font-size: 1.8em;\n}\n.section {\n  margin-bottom: 20px;\n  padding: 15px;\n  border-radius: 10px;\n  background: #F5F5F5;\n}\n</style>\n\n<div class=\"container\">\n  # 🎨 Aesthetic Dashboard\n  <div class=\"section\">\n    ## 📅 Quick View\n    - **Date:** {{dateYYYY-MM-DD}}\n    - **Week:** {{dateYYYY-isoWeek}}\n  </div>\n  \n  <div class=\"section\">\n    ## 📝 Recent Notes\n    ```dataview\n    LIST FROM #daily\n    LIMIT 5\n    ```\n  </div>\n\n  <div class=\"section\">\n    ## 🏷️ Tasks\n    ```dataview\n    TASK\n    WHERE progress != 100\n    ```\n  </div>\n\n  <div class=\"section\">\n    ## 📑 Projects\n    ```dataview\n    LIST FROM #project\n    ```\n  </div>\n</div>\n</smtcmp_block>",
+      "id": "3e2de424-1e16-4ac4-833d-4d424f5db58f",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1021,
+          "completion_tokens": 483,
+          "total_tokens": 1504
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "No, I want very asthetic, this is very noob level.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nNo, I want very asthetic, this is very noob level.\n\n"
+        }
+      ],
+      "id": "78ecfb91-5fb4-49d1-a1c5-6a1bbd72415f",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": null
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<smtcmp_block filename=\"dashboards/Professional Aesthetic Dashboard.mcss\" language=\"markdown\">\n---\ncss: true\ndataview: true\ntags: [dashboard]\n---\n\n<style>\n/* Aesthetic CSS */\n.dashboard {\n  max-width: 900px;\n  margin: auto;\n  font-family: 'Crimson Text', serif;\n  background: linear-gradient(135deg, #f5f6fa 0%, #e4e6eb 100%);\n  border-radius: 20px;\n  padding: 40px;\n  box-shadow: 0 10px 40px rgba(0,0,0,0.1);\n}\n\n/* Title Styling */\nh1 {\n  text-align: center;\n  font-weight: 300;\n  font-size: 2.2em;\n  background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin-bottom: 60px;\n  letter-spacing: 1px;\n}\n\n/* Section Cards */\n.card {\n  background: rgba(255,255,255,0.8);\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  padding: 25px;\n  margin-bottom: 30px;\n  border-left: 4px solid #6a11cb;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.08);\n  transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.card:hover {\n  transform: translateY(-3px);\n  box-shadow: 0 6px 20px rgba(0,0,0,0.12);\n}\n\n/* Section Headers */\nh2 {\n  font-size: 1.4em;\n  background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin-bottom: 20px;\n  font-weight: 400;\n}\n\n/* Task Items */\n.task-list {\n  list-style: none;\n  padding: 0;\n}\n\n.task-item {\n  padding: 10px 15px;\n  margin: 5px 0;\n  background: rgba(106,17,203,0.05);\n  border-radius: 8px;\n  border-left: 3px solid #2575fc;\n  font-size: 0.95em;\n}\n\n/* Links */\na {\n  color: #6a11cb;\n  text-decoration: none;\n  font-weight: 500;\n}\n\n/* Tags */\n.tag {\n  background: rgba(106,17,203,0.1);\n  color: #6a11cb;\n  padding: 4px 12px;\n  border-radius: 50px;\n  font-size: 0.8em;\n  margin-right: 8px;\n}\n\n/* Date Display */\n.date-widget {\n  text-align: center;\n  font-size: 0.85em;\n  color: #888;\n  margin-bottom: 30px;\n}\n</style>\n\n<div class=\"dashboard\">\n  <h1>🌸 Daily Aesthetic</h1>\n  <div class=\"date-widget\">\n    Today: {{dateYYYY-MM-DD}} | Week: {{dateYYYY-isoWeek}}\n  </div>\n  \n  <div class=\"card\">\n    <h2>🍃 Morning Focus</h2>\n    <div class=\"tag\">#morning</div>\n    <p style=\"color: #666; font-style: italic;\">\"Start your day with intention\"</p>\n    <ul class=\"task-list\">\n      <li class=\"task-item\">\n        [ ] <span class=\"tag\">🌅</span> Wake up & hydrate\n      </li>\n      <li class=\"task-item\">\n        [ ] <span class=\"tag\">🧘</span> Meditation 10 min\n      </li>\n      <li class=\"task-item\">\n        [ ] <span class=\"tag\">📞</span> Morning review\n      </li>\n    </ul>\n  </div>\n  \n  <div class=\"card\">\n    <h2>💫 Tasks</h2>\n    <div class=\"tag\">#tasks</div>\n    ```dataview\n    TASK\n    where progress != 100\n    order by start desc\n    ```\n  </div>\n  \n  <div class=\"card\">\n    <h2>📚 Notes</h2>\n    <div class=\"tag\">#notes</div>\n    ```dataview\n    LIST FROM #daily\n    | file.link | filename |\n    | --- | --- |\n    | [[Recent Note]] | \n    ```\n  </div>\n  \n  <div class=\"card\">\n    <h2>🌙 Evening Reflection</h2>\n    <div class=\"tag\">#reflection</div>\n    <div style=\"background: rgba(0,0,0,0.03); padding: 20px; border-radius: 10px;\">\n      <p style=\"color: #888; font-style: italic; text-align: center; margin: 30px 0;\">\n        What went well today? <br>\n        <br>\n        What can improve?\n      </p>\n    </div>\n  </div>\n</div>\n</smtcmp_block>",
+      "id": "8fec36f1-0b78-4095-8d75-96b9c0328595",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "qwen3.5:9b",
+          "model": "qwen3.5:9b  ",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1399,
+          "completion_tokens": 1464,
+          "total_tokens": 2863
+        }
+      }
+    }
+  ],
+  "createdAt": 1776795520629,
+  "updatedAt": 1776796250418,
+  "schemaVersion": 1
+}
