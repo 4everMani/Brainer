@@ -277,7 +277,7 @@ Agent MUST output BEFORE notes:
 ### 📂 DEPLOYMENT_MANIFEST
 
 Format:  
-/Notes//.md
+<DESTINATION_ROOT>//.md
 
 Example:  
 LLM-Knowledge-Garden/01_Foundations/Tokenization.md

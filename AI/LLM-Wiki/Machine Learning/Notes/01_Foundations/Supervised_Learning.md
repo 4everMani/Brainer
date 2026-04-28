@@ -1,7 +1,7 @@
 ---
 id: 01-supe-a1b2
 tags: [agentic-ai, 01_Foundations, supervised-learning]
-source: 0812_Machine-Learning-for-Absolute-Beginners.pdf
+source: Hands-On_Machine_Learning_with_Scikit-Learn_Keras_and_Tensorflow_-_Aurelien_Geron.pdf
 date: 2026-04-22
 type: technical-note
 ---
@@ -9,7 +9,7 @@ type: technical-note
 # Supervised Learning
 
 > [!ABSTRACT]
-> Supervised learning is a core machine learning category that imitates the human ability to extract patterns from known examples. By providing a model with a dataset containing both input variables and labeled output variables, it learns the underlying mapping to generate predictions for new, unseen data.
+> Supervised learning is a core machine learning category where the training set fed to the algorithm includes the desired solutions, called labels or targets. It focuses on learning the mapping from inputs (features) to outputs based on historical examples.
 
 ## 🧠 Intuition First
 - Imagine learning to differentiate between apples and oranges by being shown hundreds of pictures of each, explicitly labeled "apple" or "orange." Over time, you build a mental model of their features (color, shape, texture) and can classify a new fruit correctly without being told its label beforehand.
@@ -19,17 +19,20 @@ type: technical-note
 - Real-world usage: Estimating the selling price of a used car based on past sales data, or categorizing incoming emails as spam or not spam.
 
 ## 🧩 Glossary
-- [[Dependent Variable]] : The output variable or target being predicted (often denoted as 'y').
-- [[Independent Variable]] : The input features or attributes used to make predictions (often denoted as 'x' or 'X').
+- [[Labels]] : The desired solutions or categories provided in the training set (often used in classification).
+- [[Target]] : The numeric value the model is trying to predict (often used in regression).
+- [[Features]] : The individual attributes or predictors used as input (e.g., car mileage, age, brand).
+- [[Classification]] : A task where the goal is to predict a discrete class or category (e.g., spam vs. ham).
+- [[Regression]] : A task where the goal is to predict a continuous numeric value (e.g., car price).
 
 ## ⚙️ Mechanics (First Principles)
 - **Data Collection:** Gather a labeled dataset where both inputs (X) and desired outputs (y) are known.
-- **Model Training:** Feed the combinations of inputs and outputs into an algorithm (like linear regression or a neural network).
-- **Pattern Extraction:** The algorithm deciphers the statistical relationships between the independent and dependent variables.
-- **Prediction:** Pass new, unlabeled data through the trained algorithmic equation to generate predicted outputs.
+- **Model Training:** Feed the combinations of inputs and outputs into an algorithm. The algorithm learns to associate patterns in features with specific labels or targets.
+- **Prediction:** Pass new, unlabeled data through the trained model to generate predicted outputs.
 
 ## 📐 Mathematical Foundations
-- Not applicable
+- **Logistic Regression:** Often used for classification as it outputs the probability of belonging to a given class.
+- **Linear Regression:** Used for predicting numeric values.
 
 ## 💻 Implementation
 - Minimal working example using Scikit-Learn:
@@ -61,6 +64,6 @@ prediction = model.predict([[60000]])
 > Not applicable
 
 ## 🔗 Connections
-- Builds on → [[Data_Scrubbing]]
+- Builds on → [[Machine_Learning_Fundamentals]]
 - Used in → [[Linear_Regression]]
 - Related to → [[Unsupervised_Learning]]

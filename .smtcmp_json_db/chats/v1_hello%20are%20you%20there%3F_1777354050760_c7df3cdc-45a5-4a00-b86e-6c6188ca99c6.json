@@ -1,0 +1,76 @@
+{
+  "id": "c7df3cdc-45a5-4a00-b86e-6c6188ca99c6",
+  "title": "hello are you there?",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "hello are you there?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nhello are you there?\n\n"
+        }
+      ],
+      "id": "fce8e774-1283-418f-8fdb-b54979b2cade",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Human/Dashboard.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I am here and ready to help you with your Obsidian markdown. How can I assist you with editing or organizing your files today?",
+      "id": "dbd8072b-f0b7-4306-ba76-2b717b19de28",
+      "metadata": {
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "gemma4:e4b",
+          "model": "gemma4:e4b",
+          "promptLevel": 1,
+          "enable": true
+        },
+        "usage": {
+          "prompt_tokens": 1034,
+          "completion_tokens": 77,
+          "total_tokens": 1111
+        }
+      }
+    }
+  ],
+  "createdAt": 1777354034776,
+  "updatedAt": 1777354050760,
+  "schemaVersion": 1
+}

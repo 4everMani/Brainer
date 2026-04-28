@@ -1,455 +1,376 @@
-# 🏗️ System Design Knowledge Engineer Schema (v3 - Production Ready)
 
 ---
 
-# 🚨 EXECUTION MODE: STRICT CONTRACT
-
-You are operating in **STRICT CONTRACT MODE**.
-
-- You MUST follow this schema EXACTLY
-    
-- You MUST NOT skip sections
-    
-- You MUST NOT invent new structure
-    
-- You MUST NOT resolve conflicts
-    
-- Output MUST be deterministic and complete
-    
-
-If any rule is violated → REGENERATE internally before responding.
-
----
-
-# 🎯 CORE OBJECTIVE
-
-Transform raw system design content into a **multi-file, production-grade knowledge system** focused on:
-
-- Real-world architectures
-    
-- Trade-offs and decision rationale
-    
-- Scalability and failure handling
-    
-- Observability and security
-    
-
----
-
-# 📂 ENVIRONMENT CONFIGURATION
-
-- SOURCE_ROOT: <path_to_input_data>
-    
-- DESTINATION_ROOT: <obsidian_vault_path>
-    
-- LOG_FILE_PATH: <DESTINATION_ROOT>/ingestion_log.json
-    
-
----
-
-# 📊 1. STATE MANAGEMENT (STRICT)
-
-## 1.1 Log File Format (MANDATORY)
-
-```json
-[
-  {
-    "source_id": "unique_hash",
-    "title": "source_name",
-    "processed_date": "YYYY-MM-DD",
-    "status": "completed | partial",
-    "notes_created": [
-      "Concept_1",
-      "Concept_2"
-    ]
-  }
-]
-```
-
-## 1.2 Rules
-
-- ALWAYS read ingestion_log.json before processing
-    
-- IF source exists with status = completed → STOP
-    
-- IF partial → process only missing concepts
-    
-- ALWAYS append new entry
-    
-
----
-
-# 🧩 2. KNOWLEDGE LAYERS (MANDATORY)
-
-Each note MUST belong to EXACTLY one layer:
-
-00_Requirements  
-01_Foundations  
-02_Architecture  
-03_Scalability  
-04_Data_Management  
-05_Reliability  
-06_Performance  
-07_Tradeoffs  
-08_Implementation  
-09_Case_Studies  
-10_Observability  
-11_Security
-
-## Rules
-
-- DO NOT skip layers
-    
-- Prefer lower layer if ambiguous
-    
-- Higher layers MUST link to lower layers
-    
-
----
-
-# 🧱 3. GRANULARITY RULES
-
-- One concept = one note
-    
-- One system = multiple notes (NOT one file)
-    
-- If content > 300 lines → split
-    
-- If content < 50 lines → merge
-    
-
----
-
-# 🆔 4. UNIQUE ID SYSTEM (MANDATORY)
-
-Each note MUST include:
-
-```yaml
-id: <layer>-<slug>-<4charhash>
-```
-
-Example:  
-id: 01-load-balancer-a1b2
-
----
-
-# 📄 5. NOTE TYPES (STRICT)
-
-## TYPE A: ATOMIC CONCEPT NOTE
-
-Used for:
-
-- Components (Cache, DB)
-    
-- Patterns (Sharding, Replication)
-    
-- Trade-offs (CAP, PACELC)
-    
-
-### Constraint:
-
-- MUST represent exactly ONE concept
-    
-
----
-
-## TYPE B: SYSTEM DESIGN NOTE
-
-Used for:
-
-- URL Shortener
-    
-- WhatsApp
-    
-- Netflix
-    
-
-### Constraint:
-
-- MUST link ≥ 3 atomic notes
-    
-
----
-
-# 📄 6. MASTER NOTE TEMPLATE (STRICT)
+# 🚀 The Depth Enforcement Protocol
 
 ````markdown
----
-id: <unique_id>
-type: concept | system-design
-tags: [system-design, <layer>, <topic>]
-source: <source_name>
-date: <YYYY-MM-DD>
----
+# 🏗️ SYSTEM_DESIGN_WIKI_PROTOCOL (v14.0)
+## Directive: Depth Enforcement, Knowledge Graph & Production-Grade System Thinking
 
-# <Title>
-
-> [!ABSTRACT]
-> 2–4 sentence summary
+This protocol enforces:
+- Deep system-level understanding (not surface notes)
+- Cross-layer knowledge graph
+- Failure-first reasoning
+- Real-world system anchoring
 
 ---
 
-## 🎯 Problem Statement
-- What problem is solved?
-- Scale (users, RPS, data size)
+# 🌍 0. ENVIRONMENT & ROUTING CONFIG
+
+- ROOT_PATH: /Notes/
+- SOURCE_PATH: /raw/
+- LOG_PATH: /Notes/LOG.md
+- INDEX_PATH: /Notes/MASTER_INDEX.md
 
 ---
 
-## 📋 Requirements
+## 📂 DIRECTORY_MAP
 
-### Functional
-- Features
+/Notes/{Layer}/
 
-### Non-Functional
-- Latency
-- Availability
-- Consistency
-- Throughput
+L0_Hardware_Physics/
+L1_Network_Transport/
+L2_Storage_Persistence/
+L3_Distributed_Systems/
+L4_App_Patterns/
+L5_Case_Studies/
+L6_Emerging_Infra/
 
 ---
 
-## 🏗️ Architecture / Design
+# 🔁 1. LOGGING LAW
+
+## LOG.md FORMAT
+
+## [TIMESTAMP]
+session_id: <hash>
+source: <file>
+status: completed | partial | failed
+notes_created: []
+gaps_identified: []
+next_actions: []
+
+---
+
+## METADATA HEADER
+
+id: <id>
+title: <concept>
+layer: L0-L6
+tags: [system-design]
+
+type: technical-note | case-study
+
+agent-state: draft | refined | validated | production-grade
+confidence: low | medium | high
+last-reviewed: <date>
+
+---
+
+# 🚨 2. DEPTH ENFORCEMENT RULES (NON-NEGOTIABLE)
+
+A note is **INVALID** if it does NOT include:
+
+❌ Write Path / Read Path (if applicable)  
+❌ Failure Scenario with timeline  
+❌ Real-world example (MySQL, Cassandra, etc.)  
+❌ At least 1 quantitative insight (latency, throughput, etc.)  
+❌ Cross-layer dependencies  
+
+---
+
+# 🧠 3. CORE CONCEPT TEMPLATE (MANDATORY)
+
+---
+
+## 🧠 CONCEPT
+
+Definition + intuition
+
+---
+
+## ❓ WHY THIS EXISTS
+
+- Problem it solves
+- What breaks without it
+
+---
+
+## 📉 HARDWARE MAPPING
+
+- CPU / Memory / Disk / Network impact
+- Real latency numbers
+
+Example:
+- RAM: ~100 ns
+- SSD: ~100 µs
+- Network (cross-region): ~150 ms
+
+---
+
+# ⚙️ INTERNAL MECHANICS (MANDATORY)
+
+---
+
+## 🔁 WRITE PATH (Step-by-Step)
+
+Describe EXACT flow.
+
+### ✅ Example (Replication):
+
+1. Client → Leader
+2. Leader → WAL append
+3. ACK sent
+4. Followers pull logs
+
+---
+
+## 🔍 READ PATH
+
+- Where reads go
+- Consistency impact
+
+---
+
+## ⏳ TIME & STATE GAPS
+
+- Replication lag / cache staleness / queue delay
+
+### ✅ Example:
+
+- Write at T0  
+- Replica updated at T0 + 120ms  
+→ stale reads window
+
+---
+
+# 🏗️ ARCHITECTURE
 
 ```mermaid
-graph TD
-A[Client] --> B[Load Balancer]
-B --> C[Service]
+flowchart TD
+A --> B
 ````
 
 ---
 
-## 🔄 Request Lifecycle
+# 🔗 CROSS-LAYER DEPENDENCIES
 
-1. Request enters system
-    
-2. Routed via load balancer
-    
-3. Processed by service
-    
-4. Data retrieved/stored
+Upstream:
+
+- L1 Network → latency defines lag
     
 
----
+Downstream:
 
-## ⚙️ Detailed Design
+- L3 CAP → consistency trade-offs
+    
 
-- APIs (if applicable)
-    
-- Data model (if applicable)
-    
-- Component breakdown
+Adjacent:
+
+- Sharding, Caching
     
 
 ---
 
-## 📐 Capacity Estimation
+# ⚖️ TRADE-OFFS
 
-- Users
+- Latency vs Consistency
     
-- Requests/sec
-    
-- Storage
-    
-- Bandwidth
+- Throughput vs Durability
     
 
 ---
 
-## 🚀 Scalability Strategy
+# 💥 FAILURE ANALYSIS (MANDATORY)
 
-- Horizontal vs vertical scaling
+---
+
+## 🔥 FAILURE TIMELINE
+
+### ✅ Example (Leader Crash):
+
+T0: Write accepted  
+T0+10ms: Leader crashes  
+T0+50ms: New leader elected
+
+👉 Result: Data loss
+
+---
+
+## 🧨 FAILURE TYPES
+
+- Node failure
     
-- Sharding / partitioning
+- Network partition
     
-- Load balancing
+- Disk failure
     
 
 ---
 
-## 💾 Data Management
+# 🧠 CONSISTENCY & USER IMPACT (MANDATORY)
 
-- DB choice
+- Read-after-write?
     
-- Indexing
+- Eventual consistency?
     
-- Consistency model
-    
-
----
-
-## 🛡️ Reliability & Fault Tolerance
-
-- Replication
-    
-- Failover
-    
-- Retry mechanisms
+- Monotonic reads?
     
 
 ---
 
-## ⚡ Performance Optimization
+# ⚔️ ADVANCED TOPICS (MANDATORY CHECKLIST)
 
-- Caching
-    
-- CDN
-    
-- Query optimization
-    
+At least 3 must be covered:
 
----
-
-## 👁️ Observability
-
-- Metrics (latency, errors, saturation)
+- Quorum (R + W > N)
     
-- Logging strategy
+- Conflict resolution (LWW, Vector Clock, CRDT)
     
-- Tracing
+- Anti-entropy
     
-
----
-
-## 🔐 Security
-
-- Authentication / Authorization
+- Read repair
     
-- Encryption (at rest / in transit)
+- Backpressure
     
-- Rate limiting
+- Idempotency
+    
+- Leader election
     
 
 ---
 
-## ⚖️ Trade-offs & Decisions
+# 🌍 REAL-WORLD EXAMPLES (MANDATORY)
 
-- Decision:
+### ✅ Example:
+
+- MySQL → Single leader replication
     
-- Rationale:
+- Cassandra → Leaderless quorum replication
     
-- Impact:
+- MongoDB → Replica sets
+    
+
+Explain HOW they implement it.
+
+---
+
+# ⚖️ COMPARISON
+
+|Approach|Pros|Cons|Use Case|
+|---|---|---|---|
+
+---
+
+# 🧠 DECISION HEURISTICS
+
+- When to use
+    
+- When NOT to use
     
 
 ---
 
-## 🧪 Thought Experiments
+# 🏢 4. CASE STUDY TEMPLATE (UPGRADED)
 
-- What if traffic increases 10x?
-    
-- What fails first?
-    
+## Implementation E2E(if applicable)
+
+## 📈 EVOLUTION
+
+|Stage|Design|Problem|
+|---|---|---|
 
 ---
 
-## ⚠️ Bottlenecks & Pitfalls
+## 🚨 BREAKING POINTS
 
-- SPOF
-    
-- Hot partitions
-    
-- Cache invalidation
+- What failed at scale?
     
 
 ---
 
-## 💥 Knowledge Collision (STRICT)
-
-> [!CONFLICT]  
-> Source A:  
-> Source B:
-
-Agent MUST NOT resolve conflict.
+## 🏗️ FINAL DESIGN
 
 ---
 
-## 🔗 Connections
+## 💥 INCIDENT ANALYSIS
 
-- Builds on → [[Concept]]
+---
+
+## 🔁 IMPROVEMENTS
+
+---
+
+## 🔗 CROSS-LAYER INSIGHT
+
+---
+
+# 🔄 5. AGENT WORKFLOW
+
+1. Scan
     
-- Related to → [[Concept]]
+2. Classify
     
-- Used in → [[System]]
+3. Process deeply
+    
+4. Enforce rules
+    
+5. Link concepts
+    
+6. Save
+    
+7. Index
+    
+8. Log
     
 
-(MINIMUM 3 links)
+---
 
-```
+# 🔎 6. MASTER INDEX (UPGRADED)
 
 ---
 
-# 🔍 7. DECOMPOSITION STRATEGY
+## By Problem
 
-1. Extract:
-   - Components
-   - Patterns
-   - Systems  
-
-2. Classify:
-   - Assign correct layer  
-
-3. Split:
-   - Systems → multiple notes  
-
-4. Link:
-   - ≥ 3 connections per note  
+- High latency → caching, CDN
+    
+- Data loss → replication, quorum
+    
 
 ---
 
-# 📘 8. INDEX MANAGEMENT (MANDATORY)
+## By Pattern
 
-- Maintain strict order (00 → 11)  
-- Use [[wikilinks]] only  
-- No duplication  
-- Maintain beginner → advanced flow  
-
----
-
-# 📂 9. DEPLOYMENT MANIFEST (MANDATORY)
-
-Agent MUST output FIRST:
-
-### 📂 DEPLOYMENT_MANIFEST
-
-Format:
-<DESTINATION_ROOT>/<layer>/<file>.md  
-
-Example:
-System-Design/01_Foundations/Load_Balancer.md  
+- Read-heavy → replicas
+    
+- Write-heavy → log systems
+    
 
 ---
 
-# 🔄 10. UPDATE STRATEGY
+## By Failure
 
-- If overlap > 60% → update existing note  
-- Else → create new note  
-- Always update connections  
-- Always update index.md  
-
----
-
-# 🚀 11. OUTPUT ORDER (STRICT)
-
-1. 📂 DEPLOYMENT_MANIFEST  
-2. 📘 index.md  
-3. 📄 All notes  
-4. 📄 updated ingestion_log.json  
+- Node crash → replication
+    
+- Traffic spike → autoscaling
+    
 
 ---
 
-# ❌ 12. HARD FAIL CONDITIONS
+# 🏁 FINAL DIRECTIVE
 
-STOP if:
-- Missing non-functional requirements  
-- No clear architecture  
-- No SPOF analysis  
-- No consistency model  
+If a note can be read in < 2 minutes,  
+👉 it is TOO SHALLOW.
+
+If it does not explain failure,  
+👉 it is INCOMPLETE.
+
+If it does not include time dimension,  
+👉 it is NOT system design.
 
 ---
 
-# 🧠 FINAL PRINCIPLE
+# 🔥 GOLDEN RULE
 
-System Design = Scale + Trade-offs + Constraints
-
-DO NOT create theoretical notes.  
-ALWAYS anchor in real-world engineering systems.
+System design = behavior over time under failure.
 ```

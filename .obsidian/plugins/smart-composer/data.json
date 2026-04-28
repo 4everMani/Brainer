@@ -209,6 +209,14 @@
       "model": "qwen3.5:9b  ",
       "promptLevel": 1,
       "enable": true
+    },
+    {
+      "providerId": "ollama",
+      "providerType": "ollama",
+      "id": "gemma4:e4b",
+      "model": "gemma4:e4b",
+      "promptLevel": 1,
+      "enable": true
     }
   ],
   "embeddingModels": [
@@ -255,8 +263,8 @@
       "dimension": 1024
     }
   ],
-  "chatModelId": "gemma4:26b",
-  "applyModelId": "gemma4:26b",
+  "chatModelId": "gemma4:e4b",
+  "applyModelId": "gemma4:e4b",
   "embeddingModelId": "openai/text-embedding-3-small",
   "systemPrompt": "You are an expert at knowledge management. Use the provided @context to answer questions. Do not explain your thought process or narrate your actions. Use Markdown and be extremely concise.",
   "ragOptions": {
