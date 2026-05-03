@@ -1,49 +1,26 @@
-# 🗂️ MASTER INDEX
+﻿
+# ðŸ—ºï¸ MASTER_INDEX.md
 
-## 🏗️ By Layer
+## ðŸ“š By Layer
+- L0_Hardware_Physics
+- L1_Network_Transport
+- L2_Storage_Persistence
+- L3_Distributed_Systems
+    - [Foundations](L3_Distributed_Systems/Foundations.md)
+    - [Safety and Failure](L3_Distributed_Systems/Safety_and_Failure.md)
+    - [Partitioning](L3_Distributed_Systems/Partitioning.md)
+    - [Replication and Quorums](L3_Distributed_Systems/Replication_and_Quorums.md)
+    - [CAP and Consistency Models](L3_Distributed_Systems/CAP_and_Consistency_Models.md)
+    - [Isolation Levels and Anomalies](L3_Distributed_Systems/Isolation_Levels_and_Anomalies.md)
+    - [Exactly-Once Semantics](L3_Distributed_Systems/Exactly_Once_Semantics.md)
+- L4_App_Patterns
+    - [RESHADED Framework](L4_App_Patterns/RESHADED_Framework.md)
+- L5_Case_Studies
+- L6_Emerging_Infra
 
-### L0_Hardware_Physics
-- (Empty)
+## ðŸ› ï¸ By Problem
 
-### L1_Network_Transport
-- (Empty)
+## ðŸ§© By Pattern
 
-### L2_Storage_Persistence
-- (Empty)
+## ðŸ’¥ By Failure
 
-### L3_Distributed_Systems
-- [Availability](L3_Distributed_Systems/Availability.md)
-- [Reliability](L3_Distributed_Systems/Reliability.md)
-- [Scalability](L3_Distributed_Systems/Scalability.md)
-- [Maintainability](L3_Distributed_Systems/Maintainability.md)
-- [Partitioning](L3_Distributed_Systems/Partitioning.md)
-- [Replication](L3_Distributed_Systems/Replication.md)
-- [CAP Theorem](L3_Distributed_Systems/CAP_Theorem.md)
-- [Consistency Models](L3_Distributed_Systems/Consistency_Models.md)
-- [Isolation Levels](L3_Distributed_Systems/Isolation_Levels.md)
-
-### L4_App_Patterns
-- (Empty)
-
-### L5_Case_Studies
-- (Empty)
-
-### L6_Emerging_Infra
-- (Empty)
-
----
-
-## 🛠️ By Problem
-- High latency → [Scalability](L3_Distributed_Systems/Scalability.md)
-- Data loss → [Reliability](L3_Distributed_Systems/Reliability.md)
-- Service down → [Availability](L3_Distributed_Systems/Availability.md)
-
----
-
-## 🧩 By Pattern
-- (Empty)
-
----
-
-## 💥 By Failure
-- (Empty)

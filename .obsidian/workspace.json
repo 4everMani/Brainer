@@ -4,24 +4,104 @@
     "type": "split",
     "children": [
       {
-        "id": "4afdbebeab715920",
-        "type": "tabs",
+        "id": "0e265ebe31cc01c5",
+        "type": "split",
         "children": [
           {
-            "id": "ce44e765f59f2f9d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Human/Templates/New Task Template.md",
-                "mode": "source",
-                "source": false
+            "id": "4afdbebeab715920",
+            "type": "tabs",
+            "dimension": 80.62015503875969,
+            "children": [
+              {
+                "id": "ce44e765f59f2f9d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Human/Projects/Tasks/Bug Fixing.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Bug Fixing"
+                }
               },
-              "icon": "lucide-file",
-              "title": "New Task Template"
-            }
+              {
+                "id": "3845b8daf5c4838f",
+                "type": "leaf",
+                "state": {
+                  "type": "smtcmp-apply-view",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "Applying:"
+                }
+              },
+              {
+                "id": "18c3b29e618e8c35",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Human/Boards/Dashboard.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Dashboard"
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "1860a598f4eb829d",
+            "type": "tabs",
+            "dimension": 19.379844961240313,
+            "children": [
+              {
+                "id": "c4699eef5fd651c1",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "C:\\Users\\MJaiswal\\OneDrive - Stryker\\Documents\\Brainer\\AI\\LLM-Wiki\\System Design",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "C:\\Windows\\System32\\cmd.exe",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "win32": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: C:\\Windows\\System32\\conhost.exe"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -113,12 +193,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "AI/LLM-Wiki/System Design/Notes/LOG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links from LOG"
             }
           },
           {
@@ -186,11 +266,12 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 449.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,43 +289,43 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ce44e765f59f2f9d",
+  "active": "18c3b29e618e8c35",
   "lastOpenFiles": [
-    "Human/Dashboard.md",
+    "Human/Tasks/Project/finalize-bed-manager-bug-fixes-for-release-2026-05-03T10-10-18.md",
     "Untitled Kanban.md",
-    "().md",
-    "Transformer.md",
-    "Human/Projects/Boards/Dashboard.md",
-    "Human/Templates/New Task Template.md",
-    "AI/LLM-Wiki/Machine Learning/GEMINI.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/02_Mathematics/Linear_Regression.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/01_Foundations/Instance_vs_Model_Based_Learning.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/01_Foundations/Batch_vs_Online_Learning.md",
+    "Human/Boards/Dashboard.md",
+    "Human/Boards/Task Kanban.md",
+    "Human/Tasks/Project/2026-05-03T09-46-02-verify-kanban-board-automation.md",
+    "Human/Tasks/Project/2026-05-03T09-39-52-extract-bed-manager-from-care-ai-admin-portal.md",
+    "Human/Tasks/Project/2026-05-03T09-37-15-optimization-plan-for-adv-jagdamba.md",
+    "Human/Boards/SprintBoard.md",
     "Human/Projects/Boards/Task Kanban.md",
-    "Human/Projects/Tasks/Fix Login Bug.md",
+    "Human/Projects.md",
+    "Human/Dashboard.md",
+    "Human/Tasks/Project/2026-05-03T09-31-15-set-up-local-kubernetes-cluster.md",
+    "Human/Tasks/Personal/2026-05-03T09-15-17-task-automation.md",
+    "Human/Tasks/Personal/2026-05-03T09-11-18-verification-task-for-gemma.md",
+    "Human/Templates/New Task Template.md",
+    "Human/Boards",
+    "Human/Tasks/Mislenious",
+    "Human/Tasks/Personal",
+    "Human/Tasks/Project",
+    "Human/Tasks",
+    "00_Human/Boards",
+    "00_Human/Tasks/Mislenious",
+    "00_Human/Tasks/Personal",
+    "00_Human/Tasks/Project",
+    "00_Human/Tasks",
     "Human/Projects/Boards/SprintBoard.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/CAP_Theorem.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/01_Foundations/Main_Challenges_of_Machine_Learning.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/log.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/03_Architecture/K_Means_Mechanics.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/01_Foundations/Clustering_Basics.md",
-    "AI/LLM-Wiki/Machine Learning/Notes/01_Foundations/Classification_Basics.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Replication.md",
+    "Human/Projects/Boards/Dashboard.md",
+    "AI/LLM-Wiki/System Design/Notes/LOG.md",
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Foundations.md",
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Exactly_Once_Semantics.md",
+    "AI/LLM-Wiki/System Design/Notes/L4_App_Patterns/RESHADED_Framework.md",
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/CAP_and_Consistency_Models.md",
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Isolation_Levels_and_Anomalies.md",
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Replication_and_Quorums.md",
     "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Partitioning.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Consistency_Models.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Isolation_Levels.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Availability.md",
-    "AI/LLM-Wiki/System Design/GEMINI.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Maintainability.md",
-    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems",
-    "AI/LLM-Wiki/System Design/Notes/L2_Storage_Persistence",
-    "AI/LLM-Wiki/System Design/Notes/L6_Emerging_Infra",
-    "AI/LLM-Wiki/System Design/Notes/L5_Case_Studies",
-    "AI/LLM-Wiki/System Design/Notes/L4_App_Patterns",
-    "AI/LLM-Wiki/System Design/Notes/L1_Network_Transport",
-    "AI/LLM-Wiki/System Design/Notes/L0_Hardware_Physics",
-    "AI/LLM-Wiki/System Design/Notes/tmp_list.txt",
-    "AI/LLM-Wiki/System Design/Notes/tmp_content.txt",
-    "AI/LLM-Wiki/System Design/Notes/6. Quiz on TinyURL's Design_raw.json"
+    "AI/LLM-Wiki/System Design/Notes/L3_Distributed_Systems/Safety_and_Failure.md"
   ]
 }

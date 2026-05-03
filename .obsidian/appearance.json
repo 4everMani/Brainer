@@ -1,8 +1,8 @@
 {
   "theme": "obsidian",
-  "cssTheme": "Shimmering Focus",
+  "cssTheme": "AnuPpuccin",
   "enabledCssSnippets": [
     "Kanban-beautify"
   ],
-  "accentColor": "#60bcbe"
+  "accentColor": "#ff9b3d"
 }

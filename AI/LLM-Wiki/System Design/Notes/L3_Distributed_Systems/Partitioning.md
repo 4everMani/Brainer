@@ -1,136 +1,118 @@
 ---
-id: partitioning
-title: Data Partitioning (Sharding)
+id: L3_DS_003
+title: Partitioning and Sharding
 layer: L3
-tags: [system-design, partitioning, sharding, scalability]
+tags: [system-design, distributed-systems, partitioning, sharding, consistent-hashing]
 
 type: technical-note
-agent-state: refined
+agent-state: production-grade
 confidence: high
-last-reviewed: 2026-04-23
+last-reviewed: 2026-04-28
 ---
 
-## 🧠 CONCEPT
-**Partitioning** (or **Sharding**) is the process of splitting a large dataset into smaller, manageable chunks called "shards" and distributing them across multiple nodes in a network. Each node becomes responsible for a subset of the total data.
+# 🧠 CONCEPT
+
+Partitioning (or Sharding) is the process of splitting a large dataset into multiple smaller, manageable subsets (partitions) and distributing them across different nodes. This is the primary mechanism for horizontal scaling in distributed databases.
 
 ---
 
 ## ❓ WHY THIS EXISTS
-- **Scalability**: A single node has finite CPU, RAM, and Disk. Partitioning allows a system to scale horizontally by adding more nodes.
-- **Performance**: Reduces the size of indexes and datasets on each node, speeding up queries.
-- **Availability**: A failure in one shard doesn't necessarily take down the entire system (though it affects a subset of data).
 
----
-
-## 📉 HARDWARE MAPPING
-- **Disk IOPS**: Distributed across nodes, preventing a single disk from becoming a bottleneck.
-- **Memory**: Each node only needs to cache its own shard's hot data.
-- **Network**: Intra-cluster traffic for rebalancing and cross-shard queries.
-- **Real Latency**:
-    - Single shard lookup: ~1ms (local DB).
-    - Cross-shard scatter-gather: ~10ms - 100ms (due to tail latency of the slowest node).
+- **Scalability:** Overcomes the storage and throughput limits of a single machine.
+- **Performance:** Parallelizes queries and reduces the dataset size per node, potentially improving cache hit rates.
+- **Availability:** Failure of one partition only affects a subset of the data.
 
 ---
 
 # ⚙️ INTERNAL MECHANICS
 
-## 🔁 WRITE PATH (Hash Partitioning)
-1. **Client** sends write request with key $K$.
-2. **Routing Tier** calculates $P = \text{hash}(K) \mod N$ (where $N$ is the number of shards).
-3. Request routed to **Node** responsible for partition $P$.
-4. Node appends to its local **WAL** and updates state.
-5. **ACK** returned to client.
+## 🔁 STRATEGIES
 
-## 🔍 READ PATH
-1. **Point Query**: Client provides key $K$. Router finds partition $P$ and queries one node.
-2. **Range Query**:
-    - **Range Partitioned**: Efficient if the range falls within one shard.
-    - **Hash Partitioned**: Requires "Scatter-Gather" (querying all shards and merging results), which is slow.
+### 1. Vertical Partitioning
+- **Logic:** Splitting tables by columns.
+- **Example:** Moving "User Bio" and "Profile Picture URL" to a separate table/service from "User Login Credentials".
+- **Pros:** Optimizes storage for different access patterns.
+- **Cons:** Joins across partitions are expensive and complex.
 
-## ⏳ TIME & STATE GAPS
-- **Rebalancing Window**: When a shard is moved from Node A to Node B, there is a gap where Node A may still receive writes that need to be forwarded or buffered.
-- **Secondary Index Staleness**: If global secondary indexes are used, there's a lag between the primary write and the index update.
+### 2. Horizontal Partitioning (Sharding)
+- **Logic:** Splitting tables by rows. Every partition has the same schema but different rows.
+
+| Strategy | Mechanism | Pros | Cons |
+| :--- | :--- | :--- | :--- |
+| **Range Partitioning** | Data split by value ranges (e.g., A-M, N-Z). | Supports range queries efficiently. | **Hotspots** (e.g., all surnames starting with 'S'). |
+| **Hash Partitioning** | `node = hash(key) % n`. | Uniform data distribution. | Re-sharding when `n` changes requires massive data movement. |
+| **Consistent Hashing** | Map keys and nodes onto a logical ring. | Minimizes data movement during re-sharding. | Can be imbalanced without "virtual nodes". |
+
+---
+
+## 🔍 CONSISTENT HASHING DEEP DIVE
+
+Consistent hashing maps both nodes and keys to a large circular space (the "Ring", e.g., 0 to 2^32-1).
+
+1. **Write Path:**
+   - Hash the `Partition Key`.
+   - Locate the position on the ring.
+   - Walk clockwise until the first node is found. That is the owner.
+2. **Re-sharding:**
+   - **Adding Node:** Only the keys that hash to the space between the new node and its counter-clockwise predecessor need to move.
+   - **Removing Node:** Only the keys owned by the removed node move to its clockwise successor.
+
+**Virtual Nodes (VNodes):** To prevent imbalance, each physical node is hashed multiple times to different locations on the ring. This ensures that if a node fails, its load is distributed across *multiple* successors, not just one.
 
 ---
 
 # 🏗️ ARCHITECTURE
 
-### Consistent Hashing (The Ring)
-Consistent hashing maps both nodes and data keys onto a logical ring ($0$ to $2^n-1$).
-- **Virtual Nodes**: Each physical node is assigned multiple points on the ring to ensure uniform distribution and prevent "hotspots".
-
 ```mermaid
-flowchart TD
-    subgraph Ring
-        K1[Key 1] --> N1[Node A]
-        K2[Key 2] --> N2[Node B]
-        K3[Key 3] --> N3[Node C]
-        N1 --> N2 --> N3 --> N1
-    end
+flowchart LR
+    Client[Client/Proxy]
+    H[Hash Function]
+    P1[(Partition 1: A-M)]
+    P2[(Partition 2: N-Z)]
+    
+    Client -- Query(User: 'Smith') --> H
+    H -- 'S' --> P2
 ```
 
 ---
 
 # 🔗 CROSS-LAYER DEPENDENCIES
-- **Upstream**: L1 Network (Latency of internal RPCs).
-- **Downstream**: L2 Storage (Local DB performance).
-- **Adjacent**: Replication (each shard is usually replicated for HA).
+
+- **Upstream:** L4 App logic must choose an effective **Shard Key**. A poor key choice (e.g., `timestamp`) leads to write hotspots.
+- **Downstream:** L2 Storage Engines handle the physical files for each partition.
 
 ---
 
 # ⚖️ TRADE-OFFS
-- **Complexity vs. Scalability**: Manual sharding is hard to manage; automated sharding (e.g., Vitess for MySQL) adds architectural complexity.
-- **Query Flexibility vs. Write Distribution**: Range partitioning allows fast range queries but causes hotspots (e.g., all "A" names on one node). Hash partitioning balances writes but kills range query performance.
+
+- **Query Complexity:** Queries not using the shard key must "scatter-gather" (query all nodes), which is extremely slow.
+- **Transactional Integrity:** Cross-shard transactions (Atomic updates to data in P1 and P2) require complex protocols like Two-Phase Commit (2PC).
 
 ---
 
 # 💥 FAILURE ANALYSIS
 
-## 🔥 FAILURE TIMELINE (Hot Shard)
-- **T0**: Viral event causes 100x traffic to Key $K$ (e.g., a specific tweet).
-- **T+5s**: Node A (holding Shard $P$) hits 100% CPU.
-- **T+10s**: Ingress queue on Node A overflows; all requests to Node A (even for other keys in that shard) fail.
-- **T+30s**: Load balancer marks Node A unhealthy.
-- **Result**: Data in Shard $P$ is unavailable until traffic subsides or the shard is split.
+## 🔥 FAILURE TIMELINE (Hotspot Melt-down)
 
-## 🧨 FAILURE TYPES
-- **Hotspots**: Uneven data/traffic distribution.
-- **Split Brain**: During rebalancing, two nodes think they own the same shard.
-- **Resharding Failure**: Moving TBs of data between nodes can saturate network links and crash production traffic.
+1. **T0:** A celebrity (e.g., 'Zuck') starts a live stream.
+2. **T0+1s:** Millions of users query the partition holding 'Zuck's' metadata.
+3. **T0+5s:** CPU usage on Partition 7 hits 100%. Latency spikes.
+4. **T0+10s:** Requests queue up; memory is exhausted. Node 7 crashes.
+5. **T0+11s:** Load balancer redirects traffic to replicas or other nodes (if using consistent hashing without care), potentially cascading the failure.
 
----
-
-# 🧠 CONSISTENCY & USER IMPACT
-- **Cross-Shard Transactions**: Extremely difficult and usually avoided (requires 2PC/Paxos), impacting user consistency.
-- **Local Secondary Indexes**: User might see their data but it doesn't show up in search results immediately.
-
----
-
-# ⚔️ ADVANCED TOPICS
-- **Consistent Hashing**: Minimizes data movement during node additions (only $1/N$ data moves).
-- **Virtual Nodes**: Solves the "heterogeneous hardware" problem (give more powerful nodes more virtual slots).
-- **Service Discovery (ZooKeeper/Etcd)**: Maintains the "Partition Map" so clients know where to go.
+👉 **Prevention:** Use a more granular shard key or implement "hotspot sharding" (splitting the hot key across multiple sub-partitions).
 
 ---
 
 # 🌍 REAL-WORLD EXAMPLES
-- **Cassandra**: Uses consistent hashing and peer-to-peer partitioning.
-- **MongoDB**: Supports "Ranged Sharding" and "Hashed Sharding".
-- **HBase**: Uses range-based partitioning (RegionServers).
-- **Elasticsearch**: Uses fixed number of shards defined at index creation.
 
----
-
-# ⚖️ COMPARISON
-| Method | Distribution | Range Query | Rebalancing Ease |
-|---|---|---|---|
-| **Range** | Poor (Hotspots) | Excellent | High |
-| **Hash (Mod N)** | Good | Terrible | Low (Massive movement) |
-| **Consistent Hashing** | Good | Terrible | High |
+- **Google BigTable:** Uses Range Partitioning (SSTables) for efficient scanning of lexicographically sorted data.
+- **Apache Cassandra:** Uses Consistent Hashing to distribute rows across a cluster without a central coordinator for partitioning.
+- **Vitess:** A database clustering system for horizontal scaling of MySQL through sharding.
 
 ---
 
 # 🧠 DECISION HEURISTICS
-- **Use Range Partitioning when**: Range queries are the primary access pattern (e.g., Time-series data).
-- **Use Hash/Consistent Hashing when**: Uniform write distribution is critical and access is mostly by primary key.
-- **Use Virtual Nodes** to handle unbalanced clusters or different server capacities.
+
+- **Shard Key Selection:** Choose a key that is used in the majority of queries and has high cardinality (many unique values).
+- **Avoid:** Sharding based on time if you have a high write volume, as all writes will hit the "current time" shard.

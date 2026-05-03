@@ -211,8 +211,8 @@
       "enable": true
     },
     {
-      "providerId": "ollama",
       "providerType": "ollama",
+      "providerId": "ollama",
       "id": "gemma4:e4b",
       "model": "gemma4:e4b",
       "promptLevel": 1,
