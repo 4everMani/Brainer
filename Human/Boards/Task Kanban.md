@@ -7,6 +7,7 @@ display_type: kanban
 ---
 
 ## 📝 BACKLOG
+- [ ] [[Human/Tasks/Project/optimize-mfe-and-admin-portal-details-2026-05-03T11-16-49.md|Optimize MFE and Admin Portal Details]]
 
 
 

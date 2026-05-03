@@ -40,20 +40,14 @@
                 "id": "18c3b29e618e8c35",
                 "type": "leaf",
                 "state": {
-                  "type": "kanban",
+                  "type": "markdown",
                   "state": {
-                    "file": "Human/Boards/Task Kanban.md",
-                    "kanbanViewState": {
-                      "kanban-plugin": "board",
-                      "list-collapse": [
-                        null,
-                        null,
-                        false
-                      ]
-                    }
+                    "file": "Human/Tasks/Project/optimize-mfe-and-admin-portal-details-2026-05-03T11-16-49.md",
+                    "mode": "source",
+                    "source": false
                   },
-                  "icon": "lucide-trello",
-                  "title": "Task Kanban"
+                  "icon": "lucide-file",
+                  "title": "optimize-mfe-and-admin-portal-details-2026-05-03T11-16-49"
                 }
               }
             ],
@@ -297,10 +291,10 @@
   },
   "active": "18c3b29e618e8c35",
   "lastOpenFiles": [
+    "Human/Boards/Task Kanban.md",
     "Human/Boards/Dashboard.md",
     "Human/Tasks/Project/finalize-bed-manager-bug-fixes-for-release-2026-05-03T10-10-18.md",
     "Untitled Kanban.md",
-    "Human/Boards/Task Kanban.md",
     "Human/Tasks/Project/2026-05-03T09-46-02-verify-kanban-board-automation.md",
     "Human/Tasks/Project/2026-05-03T09-39-52-extract-bed-manager-from-care-ai-admin-portal.md",
     "Human/Tasks/Project/2026-05-03T09-37-15-optimization-plan-for-adv-jagdamba.md",
